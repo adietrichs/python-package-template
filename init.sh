@@ -16,6 +16,16 @@ fi
 source venv/bin/activate
 echo "Venv activated"
 
+# if venv was just created, upgrade pip and install black
+if [ $venv_created -eq 1 ]; then
+    echo "Upgrading pip"
+    pip install --upgrade pip
+    echo "Pip upgraded"
+    echo "Installing black"
+    pip install black
+    echo "Black installed"
+fi
+
 # Check if requirements.txt exists
 if [ -f "requirements.txt" ]; then
     # if requirements.txt has changed or venv was just created, install dependencies
