@@ -1,6 +1,11 @@
-# New Python Project
+# New Python Package
 
-To get started, run:
+To install directly from github, run:
+```sh
+pip install git+https://github.com/<USER>/<PROJECT>.git
+```
+
+To get started with development, run:
 
 ```sh
 source init.sh
